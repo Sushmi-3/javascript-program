@@ -55,24 +55,19 @@ function mergenduplicate(arr1, arr2){
 
     // 7) Javascript print candidates with age only above 18(Create array of Objects of your choice containing atleast 20 candidates)
 
-    let eligible=[{
-        name:'sam',age:18
-        },
-        {
-        name:'sundar',age:15
-        },
-        {
-        name:'joe',age:21
-        },
-        {
-        name:'ben',age:19
-        },
-        {
-        name:'richie',age:25
-        },
-        {
-        name:'sujo',age:14
-        },]
+    let eligible=[
+        {name:'sam',age:18},
+        {name:'sundar',age:15},
+        { name:'joe',age:21},
+        {name:'ben',age:19},
+        {name:'richie',age:25},
+        {name:'sujo',age:14},
+        {name:'sharon',age:28},
+        {name:'ziva',age:26},
+        {name:'shyilla',age:27},
+        {name:'jayden',age:11},
+        {name:'jemmi',age:19},
+    ]
         let newall=eligible.filter((vote)=>{
         return vote.age >= 18;        })
         console.log(newall)
@@ -90,5 +85,32 @@ function mergenduplicate(arr1, arr2){
 
 
 
+            // 9)  JavaScript Program to Append an Object to An Array.
+            function pushobj(arr obj){
+                arr.push(obj);
+                console.log(arr);
+            }
+            let array=[1,2,3];
+            let object={name:Sushmi, hometown:nilgiris};
+            pushobj(array,object);
 
 
+
+            // ) For a given 3 digit number, find whether it is armstrong number or not. An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. Return "Yes" if it is a armstrong number else return "No".
+
+
+            let amstrong=0;
+            const number=370;
+            let temp=number;
+            while(temp>0){
+                let remainder=temp%10;
+                amstrong = amstrong + remainder * remainder*remainder;
+                temp=parseInt(temp/10);
+            }
+            if(amstrong == number)
+            {
+                console.log('Yes');
+            }
+            else{
+                console.log('No');
+            }
