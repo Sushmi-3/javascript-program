@@ -77,6 +77,7 @@ function mergenduplicate(arr1, arr2){
         // 8) Given a string reverse each word in a string.
         let reverse=(str)=>{
             {
+
                 return str.split('') .reverse(''). join('') ;
             }
             }
@@ -86,7 +87,7 @@ function mergenduplicate(arr1, arr2){
 
 
             // 9)  JavaScript Program to Append an Object to An Array.
-            function pushobj(arr obj){
+            function pushobj(arr ,obj){
                 arr.push(obj);
                 console.log(arr);
             }
@@ -114,3 +115,94 @@ function mergenduplicate(arr1, arr2){
             else{
                 console.log('No');
             }
+
+
+
+            let a = [5,3,6, 7],
+              count = 10,
+             missing = []
+
+            for (let i = 1; i <= count; i++) {
+            if (a.indexOf(i) === -1) {
+              missing.push(i)
+         }
+      }
+             console.log(missing)
+
+
+    //  1) Write a program to find, given number is prime number or not
+
+            let test_prime=(number)=>
+             {
+                 for(let i = 2; i < number; i++)
+                 {
+                   if(number % i === 0)
+                   {
+                     return 'not a prime number';
+                   }
+                 }
+                 return 'prime number';  
+               }
+             console.log(test_prime(23));
+
+
+    //  2) JavaScript Program to Convert the First Letter of a String into UpperCase
+
+             const str = 'john';
+             const newStr = `${str[0].toUpperCase()}${str.slice(1)}`;
+             console.log( newStr);
+
+
+             
+     //  4) Write a program to find, given string is a palindrome or not.
+        
+                let checkPalindrome=(string)=> {
+
+                let len = string.length;
+
+                  for (let i = 0; i < len / 2; i++) {
+                  if (string[i] !== string[len - 1 - i]) {
+                      
+                   return 'Its not a palindrome';
+                }
+              }
+                   return 'Its a palindrome';
+             }
+               console.log(checkPalindrome('madam'));
+
+            //    ) Given an array Arr of size N, print second largest element from an array.
+
+               function print2largest(arr, arr_size) {
+                let i;
+                let largest = second = -2454635434;
+           
+                // There should be atleast two elements
+                if (arr_size < 2) {
+                   console.log(" Invalid Input ");
+                    return;
+                }
+           
+                // finding the largest element
+                for (i = 0;i<arr_size;i++){
+                    if (arr[i]>largest){
+                        largest = arr[i];
+                    }
+                }
+                 for (i = 0 ;i<arr_size;i++){
+                    if (arr[i]>second && arr[i]<largest){
+                        second = arr[i];
+                    }
+                }
+          
+                if (second == -2454635434){
+                     
+               /* console.log("There is no second largest element<br>");
+                }
+                else{ */
+               console.log("The second largest element is " + second);
+                        return;
+                    }
+                    }
+            let arr= [ 12, 35, 1, 10, 34, 1 ];
+            let n = arr.length;
+            print2largest(arr, n);
